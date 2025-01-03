@@ -1,0 +1,20 @@
+Git commands:
+
+1. git status
+
+2. git init ----> this command initializes git repo
+
+3. git add filename ------> to add untracked files to tracked files(Staging area)
+
+4. git commit-m "sending text.txt file message"
+
+5. git push -u origin urlSending 
+
+6. git remote add origin url 
+
+7. git add. -----> to add all files in the folder
+
+8. git clone url  -----> to clone repo
+
+http://vpaste.net/alr
+
