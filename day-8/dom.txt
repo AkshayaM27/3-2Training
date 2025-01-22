@@ -1,0 +1,22 @@
+
+BOM (Browser object model)
+window is the root element for BOM
+window provides different api's
+1.screen:take the laptops sreen size and related topics
+2.history(history.go,history.back)
+3.fetch 
+4.navigator takes all the devices like bluetooth,online and offline
+5.navigation:will fetch the current location
+6.storage:
+7.DOM:dom has a root element "documment"
+it is stored in the form of a tree structure (html)
+
+
+DOM (Document object model)
+----------------------------
+->it is an object
+-> it is  an api that is provided by window
+->having root element as Document
+->having lifespan :until page reloads
+-->used to create ,update/modify, delete an element
+-->we can provide style for element using dom

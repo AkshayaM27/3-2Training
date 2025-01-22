@@ -1,0 +1,26 @@
+*{
+    margin: 0%;
+    padding:0%;
+    box-sizing:border-box;
+    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /* to get font family go to the website and then click on inspect and search forbody tag click on that tag and look for the css inside the body  */
+}
+#nav{
+    border: 2px solid;
+    height: 50px;
+}
+#sub-nav{
+    border: 2px solid red;
+    height:inherit;
+    width:68%;
+    margin:auto;
+}
+#sub-nav ol{
+    list-style: none;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    
+
+
+}

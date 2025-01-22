@@ -4,8 +4,7 @@ let operation=(a,b, task)=>{// arrow function operation function is higher order
 
 }
 operation(a=Number(prompt("Enter a for addition")),
-b=Number(prompt("Enter b for addition")),
-(a,b)=>{
+b=Number(prompt("Enter b for addition")),(a,b)=>{
     return a+b;
 })
 
