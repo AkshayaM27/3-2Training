@@ -1,0 +1,9 @@
+indirect access methods in DOM
+1. document.getElementById("value)
+2. document.getElementsByClassName("value)
+3. document.getElementsByTagName("value")
+4. document.getElementsByName("value")
+5. document.querySelector("value")
+6. document.querySelectorAll("value")
+
+
