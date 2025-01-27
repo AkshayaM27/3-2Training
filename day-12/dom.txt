@@ -1,0 +1,16 @@
+Modification or manupulation of dom:
+------------------------------------
+->used to update/ modify an dom
+//method
+->createElement(): is used to update and modify the dom
+◻️two steps:
+1. create a new element using createElement() method
+eg:-
+    let a= document.createElement("h1")
+    console.log(a); // <h1></h1>
+    a.textContent="hello-world" //<h1>hello-world</h1>
+
+2.Append element to the parent element using append() or appendChild() method
+eg:-
+    document.body.appendChild(a);
+    
