@@ -1,0 +1,27 @@
+Json(Javascript object notation):
+---------------------------------
+-> It is a plain text file used to store data in the form 
+of key-value pair
+->where all the keys should be enclose in double qoute
+
+◻️ REST means json only
+-->two methods
+1. JSON.stringify(): will convert object to JSON Format.
+2. parse(): will convert JSON to object format.
+
+How to create a JSON.
+---------------------------------
+step-1: create a .json file.
+step-2: create a data in the format of key and value and 
+        key should enclosed wirh double quotes. has a value we should 
+        not undefined and function datatype.
+        we are going to create a array of object
+        [{ }, { },{ },.........](array of object)
+
+
+3 ways of fetcting JSON :
+->fetch() method: is one of the methods in window
+  ◻️fetch is a promise
+  
+->Ajax
+->Axios
