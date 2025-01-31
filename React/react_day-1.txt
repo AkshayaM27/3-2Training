@@ -1,0 +1,9 @@
+React:
+->React is a library
+->it is used to develop single page application
+->it is a component based application
+->components are resuable
+->react is declarative: react listens to the developer ,while java doesnt
+->****React renders components on the web-page without page re-loading
+->virtual dom is a copy of 
+

@@ -1,0 +1,31 @@
+eslint(ecma script lint):-
+-->used to debug purpose.
+
+package.json file:-
+-->it store all the dependency and third -party library
+
+//babel:- bable will convert advanced version of javascript to old version of javascript
+as react wont understand advanced version of javascript
+it is also called as complier or transpiler
+
+
+
+import React from'react'
+class demo extends React.Component{
+    render(){
+        return <h1> Iam class based component</h1>
+    }
+}
+2. Function based component 
+->it is js pure function.
+->it doen't use react life cycle
+->it doen't take any render() method
+->it is a stateless, after reacte 16.8 FBC became statefull component becaues of hooks.
+->there is no constructor and extends in FBC
+
+import React from 'react'
+function demo1(){
+    return()
+}
+export default demo1
+import React
