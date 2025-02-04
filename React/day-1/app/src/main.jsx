@@ -8,13 +8,15 @@ import './index.css'
 import Parent from './component/Parent.jsx'
 import Biodataparent from './component/Biodataparent.jsx'
 import Biodata from './component/Biodata.jsx'
-
+import CbcParent from './component/CbcParent.jsx'
+import State from './component/State.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
   {/* <Cbc/>
  <Fbc/>
  <Demo/> */}
-
+ <CbcParent/>
+<State/>
  <Parent/>
  <Biodata/>
  <Biodataparent/>
