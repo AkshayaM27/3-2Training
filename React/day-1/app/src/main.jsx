@@ -1,5 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+//import Play_pause_ref from './useRef/Play_pause_ref'
+//import Extrenal from './styles/Extrenal'
 //import './index.css'
 // import App from './App.jsx'
 // import Cbc from './component/Cbc.jsx'
@@ -14,13 +16,19 @@ import { createRoot } from 'react-dom/client'
 // import Signin from './component/Signin.jsx'
 // import Video_play_pause from './state/Video_play_pause.jsx'
 // import Inline from './styles/Inline.jsx'
-import "../src/styles/globally.css"
-import Comp1 from './styles/Comp1'
-import Comp2 from './styles/Comp2'
+// import "../src/styles/globally.css"
+// import Comp1 from './styles/Comp1'
+// import Comp2 from './styles/Comp2'
+//import Ref from './useRef/Ref'
+import Play_pause_ref from './useRef/Play_pause_ref'
 createRoot(document.getElementById('root')).render(
+
   <StrictMode>
-    <Comp1/>
-    <Comp2/>
+    <Play_pause_ref/>
+    {/* <Ref/> */}
+    {/* <Extrenal/> */}
+    {/* <Comp1/>
+    <Comp2/> */}
   {/* <Cbc/>
  <Fbc/>
  <Demo/> */}

@@ -44,29 +44,3 @@ body{
     cursor: pointer;
     color: #1ed760;
 }
-#main{
-    border:2px solid red;
-    height:70vh;
-    text-align:center;
-}
-#main h1{
-    margin-top:100px;
-    font-size:40px;
-    font-weight:900;
-}
-#main h2{
-    margin-top:50px;
-
-}
-#main button{
-    margin-top:50px;
-    padding:15px;
-    border-radius:18px;
-    background-attachment: black;
-    
-
-}
-#main p{
-    margin-top:50px;
-
-}
