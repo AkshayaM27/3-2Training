@@ -1,5 +1,6 @@
  import React from 'react'
 import { user,id } from "./CompA"
+//
 const CompC = () => {
   return (
     <div>{
@@ -18,6 +19,7 @@ const CompC = () => {
                             </>
                         )
                     }
+                
                 }
                 </id.Consumer>
                     }

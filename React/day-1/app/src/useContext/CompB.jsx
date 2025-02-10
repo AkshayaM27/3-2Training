@@ -7,5 +7,6 @@ const CompB = () => {
     </div>
   )
 }
+//
 
 export default CompB
