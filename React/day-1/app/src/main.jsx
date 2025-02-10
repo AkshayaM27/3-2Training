@@ -20,11 +20,20 @@ import { createRoot } from 'react-dom/client'
 // import Comp1 from './styles/Comp1'
 // import Comp2 from './styles/Comp2'
 //import Ref from './useRef/Ref'
-import Play_pause_ref from './useRef/Play_pause_ref'
+//import Play_pause_ref from './useRef/Play_pause_ref'
+ //import List from './list-keys/List'
+//import  Comp3 from './list-keys/Comp3'
+
+ import CompA from './useContext/CompA'
+// import List from './list-keys/List'
 createRoot(document.getElementById('root')).render(
 
   <StrictMode>
-    <Play_pause_ref/>
+     <CompA/> 
+
+      {/* <List/>   */}
+     {/* <Comp3/> */}
+    {/* <Play_pause_ref/> */}
     {/* <Ref/> */}
     {/* <Extrenal/> */}
     {/* <Comp1/>
