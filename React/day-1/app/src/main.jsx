@@ -1,5 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import UseEffect from './useEffect/UseEffect'
 //import Play_pause_ref from './useRef/Play_pause_ref'
 //import Extrenal from './styles/Extrenal'
 //import './index.css'
@@ -24,12 +25,13 @@ import { createRoot } from 'react-dom/client'
  //import List from './list-keys/List'
 //import  Comp3 from './list-keys/Comp3'
 
- import CompA from './useContext/CompA'
+//  import CompA from './useContext/CompA'
 // import List from './list-keys/List'
 createRoot(document.getElementById('root')).render(
 //
   <StrictMode>
-     <CompA/> 
+    <UseEffect/>
+     {/* <CompA/>  */}
 
       {/* <List/>   */}
      {/* <Comp3/> */}
