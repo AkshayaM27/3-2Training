@@ -1,0 +1,213 @@
+
+npm install axios
+npm install react-router-dom@6
+   
+
+
+
+
+
+
+
+
+
+
+
+
+   // start db always first
+
+
+
+
+//-----------main.jsx-----------------
+
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import './index.css'
+import App from './App.jsx'
+import {Routes , Route ,BrowserRouter} from "react-router-dom"
+import Home from './component/Home.jsx'
+import Create from './component/Create.jsx'
+import Edit from './component/Edit.jsx'
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+       <BrowserRouter>
+        <Routes>
+            <Route path='/' element={<Home></Home>}></Route>
+            <Route path='/create' element={<Create></Create>}></Route>
+            <Route path='/edit/:userid' element={<Edit></Edit>}></Route>
+        </Routes>
+       </BrowserRouter>
+  </StrictMode>,
+)
+
+
+---------------------home.jsx--------------
+
+
+
+import React, { useEffect, useState } from 'react'
+import axios from "axios"
+import { Link } from 'react-router-dom'
+const Home = () => {
+    let [state , setState] = useState([])
+
+    useEffect(() => {
+         axios.get("http://localhost:8081/users")
+         .then((res) => {
+            console.log(res.data);
+            setState(res.data)
+
+         })
+    } , [])
+
+    // delete
+
+    let delete1 = (id) => {
+        axios.delete(`http://localhost:8081/users/${id}`)
+        .then(() => {
+            window.location.reload()
+            window.alert("data is deleted")
+        })
+    }
+
+  return (
+    <div>
+        <button> <Link to="/create">Create</Link> </button>
+         <table border="5px solid">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>ID</th>
+                    <th>ROLE</th>
+                    <th>ACTION</th>
+                </tr>
+            </thead>
+            <tbody>
+                {
+                    state.map((res , index) => {
+                        return(
+                           <tr key={index}>
+                            <td>{res.name}</td>
+                            <td>{res.id}</td>
+                            <td>{res.role}</td>
+                            <td>
+                                <button onClick={() => {delete1(res.id)}}>Delete</button>
+                                <button> <Link to={`/edit/${res.id}`}>Edit</Link> </button>
+
+                            </td>
+                           </tr>
+                        )
+                    })
+                }
+            </tbody>
+         </table>
+    </div>
+  )
+}
+
+export default Home
+
+
+//---------------create.jsx-----------------
+
+
+
+import axios from 'axios'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+
+const Create = () => {
+    let [name , setName ] = useState()
+    let [id , setId]  = useState()
+    let [role , setRole] = useState()
+
+    let create = (e) => {
+      e.preventDefault()
+      let payload = {name , id , role}
+      console.log(payload);
+      axios.post("http://localhost:8081/users",payload)
+      .then(() => {
+        window.alert("data is created")
+      })
+    }
+  return (
+    <div>
+        <form action="">
+            name : <input type="text" name="" id="" onChange={(e) => {setName(e.target.value)}} />
+            <br />
+            id   : <input type="number" name="" id="" onChange={(e) => {setId(e.target.value)}} />
+            <br />
+            roll : <input type="text" name="" id="" onChange={(e) => {setRole(e.target.value)}} />
+            <br />
+            <button onClick={create}>submit</button>
+            <br />
+            <button> <Link to="/">back to home</Link> </button>
+        </form>
+    </div>
+  )
+}
+
+export default Create
+
+
+
+------------------Edit.jsx-----------
+
+
+
+import axios from 'axios';
+import React, { useEffect, useState } from 'react'
+import { Link, useParams } from 'react-router-dom'
+
+const Edit = () => {
+   let {userid} =  useParams()
+   console.log(userid);
+
+   let [name , setName ] = useState()
+       let [id , setId]  = useState()
+       let [role , setRole] = useState()
+
+    //    read the data
+
+    useEffect(() => {
+          axios.get("http://localhost:8081/users/"+userid)
+          .then((res) => {
+          console.log(res.data);
+        setName(res.data.name)
+        setId(res.data.id)
+        setRole(res.data.role)
+          })
+    } , [])
+
+    // update data
+
+    let edit = (e) =>{
+        e.preventDefault()
+        let payload = {name , id , role}
+        console.log(payload);
+
+       axios.put("http://localhost:8081/users/"+userid,payload)
+       .then(() => {
+        window.alert("data is updated")
+       })
+    }
+
+  return (
+    <div>
+        <form action="">
+                    name : <input type="text" name="" id="" onChange={(e) => {setName(e.target.value)}} />
+                    <br />
+                    id   : <input type="number" name="" id="" onChange={(e) => {setId(e.target.value)}} />
+                    <br />
+                    roll : <input type="text" name="" id="" onChange={(e) => {setRole(e.target.value)}} />
+                    <br />
+                    <button onClick={edit} >submit</button>
+                    <br />
+                    <button> <Link to="/">back to home</Link> </button>
+                </form>
+    </div>
+  )
+}
+
+export default Edit
