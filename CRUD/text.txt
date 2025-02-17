@@ -1,6 +1,11 @@
-
+install these in react project:
 npm install axios
 npm install react-router-dom@6
+
+To run the server open the terminal->cmd->type the following
+cd db
+json-server --watch users.json --port=8081
+
    
 
 
