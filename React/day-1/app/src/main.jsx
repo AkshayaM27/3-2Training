@@ -1,10 +1,11 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import UseEffect from './useEffect/UseEffect'
+// import UseEffect from './useEffect/UseEffect'
+import Child from './HOC/Child'
 //import Play_pause_ref from './useRef/Play_pause_ref'
 //import Extrenal from './styles/Extrenal'
-//import './index.css'
-// import App from './App.jsx'
+import './index.css'
+ import App from './App.jsx'
 // import Cbc from './component/Cbc.jsx'
 // import Fbc from './component/Fbc.jsx'
 // import Demo from './component/Demo.jsx'
@@ -30,7 +31,8 @@ import UseEffect from './useEffect/UseEffect'
 createRoot(document.getElementById('root')).render(
 //
   <StrictMode>
-    <UseEffect/>
+    {/* <UseEffect/> */}
+    <Child/>
      {/* <CompA/>  */}
 
       {/* <List/>   */}

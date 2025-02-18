@@ -42,7 +42,7 @@ const Edit = () => {
                     <br />
                     id   : <input type="number" name="" id="" onChange={(e) => {setId(e.target.value)}} />
                     <br />
-                    roll : <input type="text" name="" id="" onChange={(e) => {setRole(e.target.value)}} />
+                    role : <input type="text" name="" id="" onChange={(e) => {setRole(e.target.value)}} />
                     <br />
                     <button onClick={edit} >submit</button>
                     <br />
